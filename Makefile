@@ -8,4 +8,7 @@ clean:
 build:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 
-.PHONY: ci clean build
+install:
+	insmod usbled.ko
+
+.PHONY: ci clean build install

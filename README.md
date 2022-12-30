@@ -29,7 +29,7 @@ Compile the driver:
 
 Insert the driver into the kernel:
 
-    insmod usbled.ko
+    sudo make install
 
 Usage
 -----

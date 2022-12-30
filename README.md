@@ -10,7 +10,7 @@ USBLED Standalone is a USB LED Linux device driver for stand-alone insertion int
 
 The driver code is exactly the same as the original code written by Greg Kroah-Hartman from its addition into the kernel in 2004.
 
-USB LED driver itself was [removed from the kernel in 2016](https://patchwork.kernel.org/project/linux-input/patch/bc0c4bbd-d65d-eeb8-ed13-20bdb4cea6df@gmail.com/). Hence the need to build and insert USB LED driver into more modern kernel versions.
+USB LED driver itself was [removed from the kernel in 2016](https://patchwork.kernel.org/project/linux-input/patch/bc0c4bbd-d65d-eeb8-ed13-20bdb4cea6df@gmail.com/). Hence the need to build and insert USB LED driver into the more modern kernel versions.
 
 Installation
 ------------

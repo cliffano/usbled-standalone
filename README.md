@@ -30,3 +30,12 @@ Compile the driver:
 Insert the driver into the kernel:
 
     insmod usbled.ko
+
+Usage
+-----
+
+After plugging the USB LED device, you'll find the colour files `red`, `green`, `blue` under `/sys/bus/usb/drivers/usbled/<id>/` directory.
+
+Each of those colour files has the initial value of `0`, indicating the colour is switched off.
+
+Changing the value from `0` to `1` switches the colour on, which should then be visible on the device.

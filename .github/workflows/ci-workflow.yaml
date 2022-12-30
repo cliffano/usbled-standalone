@@ -7,5 +7,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: sudo apt install dwarves
-      - run: sudo cp /sys/kernel/btf/vmlinux /usr/lib/modules/$(shell uname -r)/build
+      - run: sudo cp /sys/kernel/btf/vmlinux /usr/lib/modules/$(uname -r)/build
       - run: make ci

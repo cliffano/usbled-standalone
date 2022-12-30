@@ -15,7 +15,7 @@ USB LED driver itself was [removed from the kernel in 2016](https://patchwork.ke
 Installation
 ------------
 
-Install kernel headers:
+Ensure kernel headers package is installed:
 
     # On Debian
     apt-get install linux-headers

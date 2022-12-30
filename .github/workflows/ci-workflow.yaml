@@ -6,4 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: apt install dwarves
+      - run: cp /sys/kernel/btf/vmlinux /usr/lib/modules/$(shell uname -r)/build
       - run: make ci

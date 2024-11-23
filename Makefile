@@ -1,3 +1,5 @@
+version ?= 0.9.0-pre.0
+
 obj-m += usbled.o
 
 ci: clean build

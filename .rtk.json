@@ -8,6 +8,13 @@
       }
     },
     {
+      "path": "dkms.conf",
+      "type": "ini",
+      "params": {
+        "variable": "PACKAGE_VERSION"
+      }
+    },
+    {
       "path": "CHANGELOG.md",
       "type": "keep-a-changelog"
     }

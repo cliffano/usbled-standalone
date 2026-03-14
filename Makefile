@@ -1,16 +1,22 @@
 version ?= 1.0.1-pre.0
 
+KERNEL_RELEASE ?= $(shell uname -r)
+KERNEL_DIR := /lib/modules/$(KERNEL_RELEASE)/build
+
 obj-m += usbled.o
 
-ci: clean build
+ci: clean deps build
+
+deps:
+	apt-get install dkms debhelper dh-dkms
 
 clean:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+	make -C $(KERNEL_DIR) M=$(PWD) clean
 
 build:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+	make -C $(KERNEL_DIR) M=$(PWD) modules
 
 install:
 	insmod usbled.ko
 
-.PHONY: ci clean build install
+.PHONY: ci clean deps build install

@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add DKMS support
 
+### Changed
+- Move dwarves installation to deps target
+
 ## 1.0.0 - 2024-11-23
 ### Added
 - Initial version

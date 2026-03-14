@@ -8,7 +8,7 @@ obj-m += usbled.o
 ci: clean deps build
 
 deps:
-	apt-get install dkms debhelper dh-dkms
+	apt-get install dwarves dkms debhelper dh-dkms
 
 clean:
 	make -C $(KERNEL_DIR) M=$(PWD) clean

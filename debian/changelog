@@ -1,0 +1,5 @@
+usbled-standalone-dkms (1.0.1~pre.0-1) unstable; urgency=medium
+
+  * Initial Debian DKMS package.
+
+ -- Cliffano Subagio <cliffano@users.noreply.github.com>  Sat, 14 Mar 2026 00:00:00 +0000

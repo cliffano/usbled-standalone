@@ -1,0 +1,15 @@
+Source: usbled-standalone-dkms
+Section: kernel
+Priority: optional
+Maintainer: Cliffano Subagio <cliffano@gmail.com>
+Build-Depends: debhelper-compat (= 13), dkms
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
+Homepage: https://github.com/cliffano/usbled-standalone
+
+Package: usbled-standalone-dkms
+Architecture: all
+Depends: dkms, ${misc:Depends}
+Description: USB LED standalone Linux kernel module (DKMS)
+ Standalone USB LED kernel module packaged for DKMS, allowing automatic
+ rebuild and installation across kernel upgrades.

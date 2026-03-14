@@ -10,3 +10,6 @@ jobs:
       - run: sudo make deps
       - run: make clean build
       - run: sudo make install
+      - run: sudo make deps-deb
+      - run: make clean build-deb
+      - run: sudo make install-deb

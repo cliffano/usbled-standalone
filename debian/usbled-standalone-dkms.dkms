@@ -1,0 +1,10 @@
+PACKAGE_NAME="usbled-standalone"
+PACKAGE_VERSION="#MODULE_VERSION#"
+
+BUILT_MODULE_NAME[0]="usbled"
+DEST_MODULE_LOCATION[0]="/updates"
+
+MAKE[0]="make build KERNEL_RELEASE=${kernelver}"
+CLEAN="make clean"
+
+AUTOINSTALL="yes"

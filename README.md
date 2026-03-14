@@ -31,6 +31,19 @@ Insert the driver into the kernel:
 
     sudo make install
 
+Build a DKMS Debian package:
+
+    # On Debian/Ubuntu
+    sudo make deps-deb
+    make build-deb
+
+This generates `../usbled-standalone-dkms_<upstream-version>-<debian-revision>_all.deb` (e.g. `../usbled-standalone-dkms_1.0.1~pre.0-1_all.deb`).
+
+Install the DKMS package:
+
+    sudo make install-deb
+
+
 Usage
 -----
 

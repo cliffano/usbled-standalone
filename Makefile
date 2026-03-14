@@ -11,7 +11,7 @@ deps:
 	apt-get install dwarves
 
 deps-deb:
-	apt-get install dkms debhelper dh-dkms
+	apt-get install build-essential dkms debhelper dh-dkms
 
 clean:
 	make -C $(KERNEL_DIR) M=$(PWD) clean

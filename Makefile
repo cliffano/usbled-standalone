@@ -16,10 +16,10 @@ deps-deb:
 	apt-get install -y build-essential dkms debhelper dh-dkms
 
 clean:
-	make -C $(KERNEL_DIR) M=$(PWD) clean
+	make -C $(KERNEL_DIR) M=$(CURDIR) clean
 
 build:
-	make -C $(KERNEL_DIR) M=$(PWD) modules
+	make -C $(KERNEL_DIR) M=$(CURDIR) modules
 
 build-deb:
 	dpkg-buildpackage -us -uc -b

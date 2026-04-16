@@ -9,8 +9,7 @@ jobs:
       - run: sudo cp /sys/kernel/btf/vmlinux /usr/lib/modules/$(uname -r)/build
       - run: sudo make deps
       - run: make clean build
-      - run: sudo make install
+      - run: sudo make install uninstall
       - run: sudo make deps-deb
       - run: make clean
-      - run: sudo make build-deb
-      - run: sudo make install-deb
+      - run: sudo make build-deb install-deb uninstall-deb

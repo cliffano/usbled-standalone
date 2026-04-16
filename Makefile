@@ -27,7 +27,13 @@ build-deb:
 install:
 	insmod usbled.ko
 
+uninstall:
+	rmmod usbled
+
 install-deb:
 	apt install -y ../usbled-standalone-dkms_$$(dpkg-parsechangelog -SVersion)_all.deb
 
-.PHONY: ci clean deps build install build-deb install-deb
+uninstall-deb:
+	apt remove -y usbled-standalone-dkms
+
+.PHONY: ci clean deps build install uninstall build-deb install-deb uninstall-deb

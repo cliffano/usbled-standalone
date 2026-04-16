@@ -1,4 +1,4 @@
-usbled-standalone-dkms (1.0.1~pre.0-1) unstable; urgency=medium
+usbled-standalone-dkms (1.0.1-pre.0-1) unstable; urgency=medium
 
   * Initial Debian DKMS package.
 

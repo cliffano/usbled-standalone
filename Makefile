@@ -8,10 +8,12 @@ obj-m += usbled.o
 ci: clean deps build
 
 deps:
-	apt-get install dwarves
+	apt-get update
+	apt-get install -y dwarves
 
 deps-deb:
-	apt-get install build-essential dkms debhelper dh-dkms
+	apt-get update
+	apt-get install -y build-essential dkms debhelper dh-dkms
 
 clean:
 	make -C $(KERNEL_DIR) M=$(PWD) clean
@@ -26,6 +28,6 @@ install:
 	insmod usbled.ko
 
 install-deb:
-	apt install ../usbled-standalone-dkms_$$(dpkg-parsechangelog -SVersion)_all.deb
+	apt install -y ../usbled-standalone-dkms_$$(dpkg-parsechangelog -SVersion)_all.deb
 
 .PHONY: ci clean deps build install build-deb install-deb

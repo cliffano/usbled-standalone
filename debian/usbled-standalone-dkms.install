@@ -1,2 +1,0 @@
-Makefile usr/src/usbled-standalone-${DEB_VERSION_UPSTREAM}
-usbled.c usr/src/usbled-standalone-${DEB_VERSION_UPSTREAM}

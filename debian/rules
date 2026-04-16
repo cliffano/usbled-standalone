@@ -1,4 +1,14 @@
 #!/usr/bin/make -f
 
+UPSTREAM_VERSION := $(shell dpkg-parsechangelog -SVersion | sed 's/-[^-]*$$//')
+DKMS_SOURCE_DIR := debian/usbled-standalone-dkms/usr/src/usbled-standalone-$(UPSTREAM_VERSION)
+
 %:
 	dh $@ --with dkms
+
+override_dh_auto_install:
+	install -d $(DKMS_SOURCE_DIR)
+	install -m 0644 Makefile usbled.c $(DKMS_SOURCE_DIR)/
+
+override_dh_install:
+	dh_install

@@ -9,6 +9,6 @@ DKMS_SOURCE_DIR := debian/usbled-standalone-dkms/usr/src/usbled-standalone-$(UPS
 override_dh_auto_install:
 	install -d $(DKMS_SOURCE_DIR)
 	install -m 0644 Makefile usbled.c $(DKMS_SOURCE_DIR)/
-
-override_dh_install:
-	dh_install
+	sed 's/#MODULE_VERSION#/$(UPSTREAM_VERSION)/g' debian/usbled-standalone-dkms.dkms \
+		> $(DKMS_SOURCE_DIR)/dkms.conf
+	chmod 0644 $(DKMS_SOURCE_DIR)/dkms.conf

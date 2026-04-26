@@ -54,6 +54,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+debian/usbled-standalone-dkms.dkms
 
 ### macOS ###
 # General

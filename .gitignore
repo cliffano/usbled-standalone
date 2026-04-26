@@ -1,3 +1,7 @@
+# Start of Studio gitignore
+debian/usbled-standalone-dkms.dkms
+# End of Studio gitignore
+
 # Created by https://www.toptal.com/developers/gitignore/api/c,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=c,macos
 
@@ -54,7 +58,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-debian/usbled-standalone-dkms.dkms
 
 ### macOS ###
 # General

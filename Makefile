@@ -36,6 +36,11 @@ deps-deb:
 build-deb:
 	dpkg-buildpackage -us -uc -b
 
+# Prevent dpkg-buildpackage/debhelper from invoking make
+override_dh_auto_build:
+	# DKMS package: nothing to build at package build time
+	:
+
 install-deb:
 	apt install -y ../usbled-standalone-dkms_$$(dpkg-parsechangelog -SVersion)_all.deb
 

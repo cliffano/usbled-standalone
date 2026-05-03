@@ -18,3 +18,7 @@ override_dh_dkms:
 override_dh_clean:
 	rm -f debian/usbled-standalone-dkms.dkms
 	dh_clean
+
+override_dh_auto_build:
+	# DKMS package: nothing to build at package build time
+	:

@@ -10,6 +10,8 @@ jobs:
       - run: sudo make deps
       - run: make clean build
       - run: sudo make install uninstall
-      - run: sudo make deps-deb
-      - run: make clean
-      - run: sudo make build-deb install-deb uninstall-deb
+  build-deb:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - run: sudo make deps-deb build-deb install-deb uninstall-deb

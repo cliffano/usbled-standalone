@@ -1,10 +1,8 @@
-<img align="right" src="https://raw.github.com/cliffano/usbled/master/avatar.jpg" alt="Avatar"/>
+![Avatar](avatar.jpg)
 
 [![Build Status](https://github.com/cliffano/usbled/workflows/CI/badge.svg)](https://github.com/cliffano/usbled/actions?query=workflow%3ACI)
-<br/>
 
-USBLED Standalone
------------------
+# USBLED Standalone
 
 USBLED Standalone is a USB LED Linux device driver for stand-alone kernel insertion.
 
@@ -12,8 +10,7 @@ The driver code is exactly the same as the original code written by [Greg Kroah-
 
 USB LED driver was [removed from the kernel in 2016](https://patchwork.kernel.org/project/linux-input/patch/bc0c4bbd-d65d-eeb8-ed13-20bdb4cea6df@gmail.com/), hence the need to build and insert USB LED driver as a stand-alone in order to support old USB LED devices (Delcom Visual Signal Indicator, Riso Kagaku LED, Dream Cheeky Webmail Notifier) on the more modern kernel versions.
 
-Installation
-------------
+## Installation
 
 Ensure kernel headers package is installed:
 
@@ -31,21 +28,17 @@ Insert the driver into the kernel:
 
     sudo make install
 
-Build a DKMS Debian package:
+Alternatively, you can also build a DKMS Debian package:
 
-    # On Debian/Ubuntu
     sudo make deps-deb
     make build-deb
-
-This generates `../usbled-standalone-dkms_<upstream-version>-<debian-revision>_all.deb` (e.g. `../usbled-standalone-dkms_1.0.1~pre.0-1_all.deb`).
 
 Install the DKMS package:
 
     sudo make install-deb
 
 
-Usage
------
+## Usage
 
 After plugging the USB LED device, you'll find the colour files `red`, `green`, `blue` under `/sys/bus/usb/drivers/usbled/<id>/` directory.
 

@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add DKMS support
 - Add Debian package build and install support
 - Add DKMS build and publishing support
+- Manage debian/changelog version with RTK
 
 ### Changed
 - Move dwarves installation to deps target

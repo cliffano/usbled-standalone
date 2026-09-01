@@ -17,6 +17,13 @@
     {
       "path": "CHANGELOG.md",
       "type": "keep-a-changelog"
+    },
+    {
+      "path": "debian/changelog",
+      "type": "text",
+      "params": {
+        "regex": "(?<=^usbled-standalone-dkms \\()[^)]+(?=-\\d+\\))"
+      }
     }
   ]
 }

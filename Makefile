@@ -43,6 +43,6 @@ uninstall-deb:
 	apt remove -y usbled-standalone-dkms
 
 publish-deb:
-	gh release upload $(version) ../usbled-standalone-dkms_$(version)-1_all.deb 
+	gh release create $(version) ../usbled-standalone-dkms_$(version)-1_all.deb
 
 .PHONY: ci deps clean build install uninstall deps-deb build-deb install-deb uninstall-deb publish-deb

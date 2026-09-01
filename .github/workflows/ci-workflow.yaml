@@ -5,7 +5,7 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - run: sudo cp /sys/kernel/btf/vmlinux /usr/lib/modules/$(uname -r)/build
       - run: sudo make deps
       - run: make clean build
@@ -13,5 +13,5 @@ jobs:
   build-deb:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - run: sudo make deps-deb build-deb install-deb uninstall-deb

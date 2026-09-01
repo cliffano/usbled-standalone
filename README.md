@@ -14,28 +14,38 @@ USB LED driver was [removed from the kernel in 2016](https://patchwork.kernel.or
 
 Ensure kernel headers package is installed:
 
-    # On Debian
-    apt-get install linux-headers
+```text
+# On Debian
+apt-get install linux-headers
 
-    # On Raspberry Pi OS
-    apt-get install raspberrypi-kernel-headers
+# On Raspberry Pi OS
+apt-get install raspberrypi-kernel-headers
+```
 
 Compile the driver:
 
-    make build
+```shell
+make build
+```
 
 Insert the driver into the kernel:
 
-    sudo make install
+```text
+sudo make install
+```
 
 Alternatively, you can also build a DKMS Debian package:
 
-    sudo make deps-deb
-    make build-deb
+```text
+sudo make deps-deb
+make build-deb
+```
 
 Install the DKMS package:
 
-    sudo make install-deb
+```text
+sudo make install-deb
+```
 
 
 ## Usage

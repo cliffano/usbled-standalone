@@ -1,5 +1,6 @@
 # Start of Studio gitignore
 debian/usbled-standalone-dkms.dkms
+# Has addendum
 # End of Studio gitignore
 
 # Created by https://www.toptal.com/developers/gitignore/api/c,macos
@@ -93,3 +94,7 @@ Temporary Items
 *.icloud
 
 # End of https://www.toptal.com/developers/gitignore/api/c,macos
+
+# Start of Studio gitignore addendum
+!dkms.conf
+# End of Studio gitignore addendum

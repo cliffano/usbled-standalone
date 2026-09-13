@@ -9,9 +9,9 @@
     },
     {
       "path": "dkms.conf",
-      "type": "ini",
+      "type": "text",
       "params": {
-        "variable": "PACKAGE_VERSION"
+        "regex": "(?<=PACKAGE_VERSION=\")[^\"]+(?=\")"
       }
     },
     {

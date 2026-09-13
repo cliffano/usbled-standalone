@@ -6,7 +6,6 @@ name: Publish
       - '*'
 permissions:
   contents: read
-  id-token: write
 jobs:
   build:
     runs-on: ubuntu-24.04

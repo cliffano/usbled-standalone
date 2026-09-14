@@ -22,7 +22,19 @@ apt-get install linux-headers
 apt-get install raspberrypi-kernel-headers
 ```
 
-Compile the driver:
+Download DKMS Debian package from [Releases page](https://github.com/cliffano/usbled-standalone/releases):
+
+```shell
+curl -O https://github.com/cliffano/usbled-standalone/releases/download/1.1.0/usbled-standalone-dkms_1.1.0-1_all.deb
+```
+
+Then install the DKMS package:
+
+```shell
+apt install usbled-standalone-dkms_1.1.0-1_all.deb
+```
+
+Alternatively, you can compile the driver:
 
 ```shell
 make build
@@ -47,7 +59,6 @@ Install the DKMS package:
 sudo make install-deb
 ```
 
-
 ## Usage
 
 After plugging the USB LED device, you'll find the colour files `red`, `green`, `blue` under `/sys/bus/usb/drivers/usbled/<id>/` directory.
@@ -55,3 +66,8 @@ After plugging the USB LED device, you'll find the colour files `red`, `green`, 
 Each of those colour files has the initial value of `0`, indicating the colour is switched off.
 
 Changing the value from `0` to `1` switches the colour on, which should then be visible on the device.
+
+## FAQ
+
+Q: Why does `/sys/bus/usb/drivers/usbled/` not exist after installing the DKMS package?
+A: You have to plug the USB LED device first, then you'll find the path.

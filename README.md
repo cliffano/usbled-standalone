@@ -69,5 +69,6 @@ Changing the value from `0` to `1` switches the colour on, which should then be 
 
 ## FAQ
 
-Q: Why does `/sys/bus/usb/drivers/usbled/` not exist after installing the DKMS package?
+*Q: Why does `/sys/bus/usb/drivers/usbled/` not exist after installing the DKMS package?*
+
 A: You have to plug the USB LED device first, then you'll find the path.
